@@ -21,12 +21,12 @@ struct s_studente
 };
 
 typedef struct s_studente studente;
-struct s_studente alunno[N];
-int i;
-FILE *puntaFile;
 
 int main(int argc, char** argv)
 { 
+    studente alunno[N];
+    int i;
+    FILE *puntaFile;
     printf("Inserisci %d di alunni.\n", N);
     
     if(puntaFile)
@@ -48,6 +48,7 @@ int main(int argc, char** argv)
         fwrite(&alunno, sizeof(studente), N, puntaFile);
         int fclose(FILE *puntaFile);  
     }
+    
       else
       printf("Non riesco ad aprire il file ");
      return (EXIT_SUCCESS);
